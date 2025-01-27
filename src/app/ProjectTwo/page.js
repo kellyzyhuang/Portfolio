@@ -2,6 +2,7 @@ import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectTwo.module.css"; 
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 export default function ProjectTwo() {
   return (
@@ -38,7 +39,7 @@ export default function ProjectTwo() {
           <Image src="/images/bee-5.png" width={130} height={300} alt="one"/>
           <Image src="/images/bee-6.png" width={130} height={300} alt="one"/>
         </section>
-        <button className={styles.nextButton}>Next Project</button>
+        <button className={styles.nextButton}><Link href="/ProjectOne">Next Project</Link></button>
       </main>
       <Footer/>
     </>

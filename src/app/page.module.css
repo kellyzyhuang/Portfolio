@@ -176,9 +176,9 @@ a.secondary {
   0% {
     transform: translate(50px, 0px); 
 } 50% {
-    transform: translate(0px, 0px) scale(2); 
+    transform: translate(25px, 25px) scale(2); 
 } 75% {
-    transform: translate(-50px, 0px) scale(1.5); 
+    transform: translate(-50px, -25px) scale(1.5); 
 } 100% {
   transform: translate(0px, 0px); 
 }
@@ -186,4 +186,13 @@ a.secondary {
 
 .crab {
   animation: crab 1s infinite linear; 
+}
+
+.message {
+  display: flex; 
+  flex-direction: row; 
+}
+
+.message h1, .message p {
+  font-size: 3rem; 
 }
