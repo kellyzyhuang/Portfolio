@@ -191,8 +191,28 @@ a.secondary {
 .message {
   display: flex; 
   flex-direction: row; 
+  margin-left: -10rem; 
 }
 
 .message h1, .message p {
   font-size: 3rem; 
+}
+
+.projectGallery {
+  margin-left: -10rem; 
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+  .nav {
+    margin-left: -6rem; 
+  }
+
+  .message {
+    transform: scale(1.75); 
+  }
+
+  .projectGallery {
+    transform: scale(1.75); 
+    margin-top: 2rem; 
+  }
 }

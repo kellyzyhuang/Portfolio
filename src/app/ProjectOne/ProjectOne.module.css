@@ -95,4 +95,22 @@
     margin-right: 20rem;
     cursor: pointer; 
   }
+
+  .productCard {
+    margin-left: 27%; 
+  }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+  .role {
+    margin-right: 39.75rem; 
+  }
+
+  .nextButton {
+    margin-right: 50rem; 
+  }
+
+  .productCard {
+    margin-left: 35%; 
+  }
 }

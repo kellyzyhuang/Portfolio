@@ -24,6 +24,21 @@
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
   .nav {
-    margin-left: 10rem; 
+    margin-left: 20rem; 
+  }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+  .navList {
+    margin-left: 75%;
+    transform: scale(1.75);  
+  }
+
+  .logo {
+    transform: scale(1.75); 
+  }
+
+  .nav {
+    margin-top: 1rem; 
   }
 }

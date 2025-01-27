@@ -7,7 +7,9 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <NavBar/>
+      <div className={styles.nav}>
+        <NavBar/>
+      </div>
       <main className={styles.main}>
         <div className={styles.message}>
           <h1>Coming Soon</h1>
