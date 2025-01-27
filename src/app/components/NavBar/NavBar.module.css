@@ -15,9 +15,15 @@
   list-style-type: none; 
   display: flex; 
   gap: 10px;  
-  margin-left: 70rem; 
+  margin-left: 60rem; 
 }
 
 .logo {
   margin-left: 30px;  
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .nav {
+    margin-left: 10rem; 
+  }
 }

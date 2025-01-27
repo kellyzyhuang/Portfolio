@@ -1,6 +1,7 @@
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectTwo.module.css"; 
+import Footer from "../components/Footer";
 
 export default function ProjectTwo() {
   return (
@@ -12,7 +13,7 @@ export default function ProjectTwo() {
           <h2>Mobile Application Design & Development</h2>
         </header>
         <section className={styles.banner}>
-          <Image src="/images/hivefive.jpg" width={900} height={400} alt="banner"/>
+          <Image src="/images/hivefive.jpg" width={900} height={420} alt="banner"/>
         </section>
         <section className={styles.flexRow}>
           <div className={styles.overview}>
@@ -39,6 +40,7 @@ export default function ProjectTwo() {
         </section>
         <button className={styles.nextButton}>Next Project</button>
       </main>
+      <Footer/>
     </>
   )
 }
