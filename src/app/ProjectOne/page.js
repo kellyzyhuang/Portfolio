@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "./ProjectOne.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function ProjectOne() {
   return (
@@ -38,7 +37,6 @@ export default function ProjectOne() {
           <Image src="/images/exutoireThree.png" width={900} height={500} alt="one"/>
         </section>
         <div className={styles.buttonGroup}>
-          <MdOutlineKeyboardDoubleArrowRight />
           <button className={styles.nextButton}><Link href="/ProjectTwo">Next Project</Link></button>
         </div>
       </main>
