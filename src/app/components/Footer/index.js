@@ -1,9 +1,6 @@
 import Image from "next/image"; 
 import styles from "./Footer.module.css"; 
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
-
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -15,9 +12,9 @@ export default function Footer() {
       <div className={styles.right}>
         <p>Connect with me!</p>
         <div className={styles.icons}>
-          <a href="https://www.linkedin.com/" target="_blank"><FaLinkedin size={24} /></a>
-          <a href="https://github.com/" target="_blank"><FaGithub size={24} /></a>
-          <a href="mailto:your.email@example.com"><MdOutlineMail size={24} /></a>
+          <a href="https://www.linkedin.com/" target="_blank"><Image src="/images/linkedin.svg" width={24} height={24} alt="linkedin icon" /></a>
+          <a href="https://github.com/" target="_blank"><Image src="/images/github.svg" width={24} height={24} alt="github icon"  /></a>
+          <a href="mailto:your.email@example.com"><Image src="/images/mail.svg" width={24} height={24} alt="mail icon"  /></a>
         </div>
       </div>
     </footer>
