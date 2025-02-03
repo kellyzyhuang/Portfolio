@@ -166,14 +166,13 @@
 }
 
 /* Next Button Icon Styling */
-.nextButton svg {
-  transition: transform 0.2s ease-in-out;
-  transform: scale(1.5); 
+.svg {
+  transition: transform 0.2s ease-in-out;; 
   margin-left: 3px; 
 }
 
-.nextButton:hover svg {
-  transform: translateX(5px) scale(1.5);
+.svg:hover  {
+  transform: translateX(5px);
 }
 
 /* Footer */

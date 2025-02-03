@@ -3,8 +3,6 @@ import Image from "next/image";
 import styles from "./ProjectTwo.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
-import { AiOutlineClose } from "react-icons/ai"; 
-import { FiChevronsRight } from "react-icons/fi";
 
 export default function ProjectTwo() {
   return (
@@ -16,7 +14,7 @@ export default function ProjectTwo() {
             <h1>HiveFive</h1>
             <button className={styles.closeButton}>
               <Link href="/">
-              <AiOutlineClose size={32} />
+              <Image src="images/exit.svg" width={28} height={28} alt="exit icon"/>
               </Link>
             </button>
           </div>
@@ -80,7 +78,7 @@ export default function ProjectTwo() {
         <div className={styles.buttonGroup}>
           <button className={styles.nextButton}>
             <Link href="/ProjectThree">
-              Next Project <FiChevronsRight size={32} />
+              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg}  />
             </Link>
           </button>
         </div>
