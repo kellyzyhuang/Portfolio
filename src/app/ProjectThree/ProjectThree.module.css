@@ -176,6 +176,20 @@
   transform: translateX(5px) scale(1.5);
 }
 
+.designSuccess {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.paraTwo {
+  margin-top: 1rem; 
+}
+
 /* Footer */
 .footer {
   display: flex;

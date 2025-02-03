@@ -1,8 +1,80 @@
+@import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
+
+/* Footer Layout */
 .footer {
-  display: flex; 
-  flex-direction: row; 
-  gap: 30px; 
-  justify-content: center; 
-  align-items: center; 
-  margin-top: 3rem; 
+  display: flex;
+  justify-content: space-between; /* Ensures logo is on the left and social links on the right */
+  align-items: center;
+  width: 100%;
+  max-width: 1400px; /* Prevents excessive stretching */
+  padding: 20px 60px;
+  margin: 0 auto; /* Ensures footer stays centered */
+  background: black;
+  color: white;
+  font-family: "Satoshi", sans-serif;
+}
+
+/* Left Side (Logo) */
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Ensures logo is pushed to the left */
+}
+
+/* Right Side (Text & Icons) */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.icons a {
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.icons a:hover {
+  color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 30px;
+  }
+
+  .right {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left {
+    justify-content: center;
+  }
+
+  .right {
+    align-items: center;
+  }
 }

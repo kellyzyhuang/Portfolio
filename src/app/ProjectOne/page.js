@@ -3,24 +3,34 @@ import Image from "next/image";
 import styles from "./ProjectOne.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { AiOutlineClose } from "react-icons/ai"; 
+import { FiChevronsRight } from "react-icons/fi";
 
 export default function ProjectOne() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <main className={styles.productCard}>
         <header className={styles.header}>
-          <h1>EXUTOIRE</h1>
+          <div className={styles.titleContainer}>
+            <h1>EXUTOIRE</h1>
+            <button className={styles.closeButton}>
+              <Link href="/">
+              <AiOutlineClose size={32} />
+              </Link>
+            </button>
+          </div>
           <h2>E-Commerce Website Design & Development</h2>
         </header>
         <section className={styles.banner}>
           <Image src="/images/EXUTOIRE.png" width={900} height={350} alt="banner"/>
         </section>
+
         <section className={styles.flexRow}>
           <div className={styles.overview}>
             <h3>Overview</h3>
             <p>EXUTOIRE is an online bakery store allowing users to browse items and purchase them for pick-up or delivery. The website is designed to incorporate EXTUOIRE’s brand identity of simplicity and sophistication through the usage of dark red tones and minimalism.</p>
-            <button className={styles.tryButton}>Try the app!</button>
+            <button className={styles.tryButton}>Visit here!</button>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>
@@ -31,16 +41,29 @@ export default function ProjectOne() {
             <p>Figma, Vite + React</p>
           </div>
         </section>
+
+        {/* Example Screens Header */}
+        <section className={styles.sectionHeader}>
+          <h3>Example Screens</h3>
+        </section>
+
+        {/* Image Gallery */}
         <section className={styles.gallery}>
           <Image src="/images/exutoireOne.png" width={900} height={500} alt="one"/>
-          <Image src="/images/exutoireTwo.png" width={900} height={500} alt="one"/>
-          <Image src="/images/exutoireThree.png" width={900} height={500} alt="one"/>
+          <Image src="/images/exutoireTwo.png" width={900} height={500} alt="two"/>
+          <Image src="/images/exutoireThree.png" width={900} height={500} alt="three"/>
         </section>
+
+        {/* Next Project Button with Arrows */}
         <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}><Link href="/ProjectTwo">Next Project</Link></button>
+          <button className={styles.nextButton}>
+            <Link href="/ProjectTwo">
+              Next Project <FiChevronsRight size={32} />
+            </Link>
+          </button>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }

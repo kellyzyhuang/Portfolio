@@ -3,19 +3,29 @@ import Image from "next/image";
 import styles from "./ProjectTwo.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { AiOutlineClose } from "react-icons/ai"; 
+import { FiChevronsRight } from "react-icons/fi";
 
 export default function ProjectTwo() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <main className={styles.productCard}>
         <header className={styles.header}>
-          <h1>HiveFive</h1>
+          <div className={styles.titleContainer}>
+            <h1>HiveFive</h1>
+            <button className={styles.closeButton}>
+              <Link href="/">
+              <AiOutlineClose size={32} />
+              </Link>
+            </button>
+          </div>
           <h2>Mobile Application Design & Development</h2>
         </header>
         <section className={styles.banner}>
-          <Image src="/images/hivefive.jpg" width={900} height={420} alt="banner"/>
+          <Image src="/images/hivefive-cover.png" width={900} height={200} alt="banner" />
         </section>
+        
         <section className={styles.flexRow}>
           <div className={styles.overview}>
             <h3>Overview</h3>
@@ -31,17 +41,51 @@ export default function ProjectTwo() {
             <p>Figma, NextJS</p>
           </div>
         </section>
-        <section className={styles.gallery}>
-          <Image src="/images/bee-1.png" width={130} height={300} alt="one"/>
-          <Image src="/images/bee-2.png" width={130} height={300} alt="one"/>
-          <Image src="/images/bee-3.png" width={130} height={300} alt="one"/>
-          <Image src="/images/bee-4.png" width={130} height={300} alt="one"/>
-          <Image src="/images/bee-5.png" width={130} height={300} alt="one"/>
-          <Image src="/images/bee-6.png" width={130} height={300} alt="one"/>
+
+        {/* Example Screens Header */}
+        <section className={styles.sectionHeader}>
+          <h3>Example Screens</h3>
         </section>
-        <button className={styles.nextButton}><Link href="/ProjectOne">Next Project</Link></button>
+
+        {/* Image Gallery */}
+        <section className={styles.gallery}>
+          <Image src="/images/bee-1.png" width={130} height={300} alt="one" />
+          <Image src="/images/bee-2.png" width={130} height={300} alt="two" />
+          <Image src="/images/bee-3.png" width={130} height={300} alt="three" />
+          <Image src="/images/bee-4.png" width={130} height={300} alt="four" />
+          <Image src="/images/bee-5.png" width={130} height={300} alt="five" />
+          <Image src="/images/bee-6.png" width={130} height={300} alt="six" />
+        </section>
+
+        {/* What Makes This Design Successful? */}
+        <section className={styles.designSuccess}>
+          <p>HiveFive uses gamification to make conservation efforts more engaging. By allowing users to support bee sustainability through interactive quizzes, the app encourages participation without requiring financial contributions. The fun and educational approach helps raise awareness about bees while providing users with a sense of achievement.</p>
+          <p>The visual design reinforces this mission by using warm, nature-inspired colors and a customizable mascot to create an inviting experience. By combining interactive learning with a rewarding donation system, HiveFive motivates users to take part in meaningful environmental impact.</p>
+        </section>
+
+        {/* Style Guide Section */}
+        <section className={styles.sectionHeader}>
+          <h3>Style Guide</h3>
+        </section>
+        <section className={styles.styleGuide}>
+          <div className={styles.styleGuideImages}>
+            <Image src="/images/style-1.png" width={300} height={200} alt="style one" />
+            <Image src="/images/style-2.png" width={300} height={200} alt="style two" />
+            <Image src="/images/style-3.png" width={300} height={200} alt="style three" />
+          </div>
+          <button className={styles.styleGuideButton}>View Style Guide!</button>
+        </section>
+
+        {/* Next Project Button with Arrows */}
+        <div className={styles.buttonGroup}>
+          <button className={styles.nextButton}>
+            <Link href="/ProjectThree">
+              Next Project <FiChevronsRight size={32} />
+            </Link>
+          </button>
+        </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }

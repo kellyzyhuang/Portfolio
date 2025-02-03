@@ -1,44 +1,63 @@
 @import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
 
-
+/* Navigation Bar */
 .nav {
-  display: flex; 
-  flex-direction: row; 
-  padding: 30px; 
-  font-family: "Satoshi", sans-serif; 
-  font-weight: bold; 
-  font-size: 2rem; 
-  width: 100vw; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  width: 100%;
+  background: black;
+  color: white;
+  font-family: "Satoshi", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
+/* Navigation List */
 .navList {
-  list-style-type: none; 
-  display: flex; 
-  gap: 10px;  
-  margin-left: 60rem; 
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
+.navList li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.navList li a:hover {
+  color: #f2f2f2;
+}
+
+/* Logo */
 .logo {
-  margin-left: 30px;  
+  width: 60px;
+  height: auto;
 }
 
-@media screen and (min-width: 1920px) and (min-height: 1080px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
   .nav {
-    margin-left: 20rem; 
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
-@media screen and (min-width: 2560px) and (min-height: 1600px) {
-  .navList {
-    margin-left: 75%;
-    transform: scale(1.75);  
+@media (min-width: 2560px) {
+  .nav {
+    font-size: 2rem;
   }
 
   .logo {
-    transform: scale(1.75); 
-  }
-
-  .nav {
-    margin-top: 1rem; 
+    width: 80px;
   }
 }
