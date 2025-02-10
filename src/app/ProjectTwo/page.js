@@ -28,7 +28,7 @@ export default function ProjectTwo() {
           <div className={styles.overview}>
             <h3>Overview</h3>
             <p>HiveFive is a mobile app designed to empower environmental enthusiasts to contribute to the sustainability of bees and their habitats. It tackles common user challenges, such as time constraints and lack of financial means, by allowing the user to donate to bee conservation through short knowledge quizzes.</p>
-            <button className={styles.tryButton}>Try the app!</button>
+            <button className={styles.tryButton}><a href="https://hivefive-bee.vercel.app/" target="_blank">Try the app!</a></button>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>
@@ -62,16 +62,23 @@ export default function ProjectTwo() {
         </section>
 
         {/* Style Guide Section */}
-        <section className={styles.sectionHeader}>
-          <h3>Style Guide</h3>
-        </section>
         <section className={styles.styleGuide}>
           <div className={styles.styleGuideImages}>
-            <Image src="/images/style-1.png" width={300} height={200} alt="style one" />
-            <Image src="/images/style-2.png" width={300} height={200} alt="style two" />
-            <Image src="/images/style-3.png" width={300} height={200} alt="style three" />
+            <div className={styles.imageContainer}>
+              <Image src="/images/style-1.png" layout="fill" objectFit="contain" alt="style one" />
+            </div>
+            <div className={styles.imageContainer}>
+              <Image src="/images/style-2.png" layout="fill" objectFit="contain" alt="style two" />
+            </div>
+            <div className={styles.imageContainer}>
+              <Image src="/images/style-3.png" layout="fill" objectFit="contain" alt="style three" />
+            </div>
           </div>
-          <button className={styles.styleGuideButton}>View Style Guide!</button>
+          <button className={styles.styleGuideButton}>
+            <a href="https://hivefive-a5styleguide.vercel.app/" target="_blank">
+              View Style Guide!
+            </a>
+          </button>
         </section>
 
         {/* Next Project Button with Arrows */}

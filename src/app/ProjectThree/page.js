@@ -28,7 +28,7 @@ export default function ProjectThree() {
           <div className={styles.overview}>
             <h3>Overview</h3>
             <p>Finding Aurora is an interactive, educational e-book designed for children ages 3+. They join a polar bear named Aurora on her journey to learn about and see the Aurora borealis. Through meeting new characters, readers learn various animal facts while being encouraged to practice healthy habits and self care.</p>
-            <button className={styles.tryButton}>Read here!</button>
+            <button className={styles.tryButton}><a href="https://indd.adobe.com/view/6ee7ff2e-8483-47ef-bac7-fb733befdb7a" target="_blank">Read here!</a></button>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>
@@ -60,7 +60,7 @@ export default function ProjectThree() {
         {/* Next Project Button with Arrows */}
         <div className={styles.buttonGroup}>
           <button className={styles.nextButton}>
-            <Link href="/ProjectOne">
+            <Link href="/ProjectFour">
               Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg} />
             </Link>
           </button>

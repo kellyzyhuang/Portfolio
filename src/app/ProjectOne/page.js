@@ -28,7 +28,7 @@ export default function ProjectOne() {
           <div className={styles.overview}>
             <h3>Overview</h3>
             <p>EXUTOIRE is an online bakery store allowing users to browse items and purchase them for pick-up or delivery. The website is designed to incorporate EXTUOIRE’s brand identity of simplicity and sophistication through the usage of dark red tones and minimalism.</p>
-            <button className={styles.tryButton}>Visit here!</button>
+            <button className={styles.tryButton}><a href="https://comp-3170-final-proj.vercel.app/" target="_blank">Visit here!</a></button>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>

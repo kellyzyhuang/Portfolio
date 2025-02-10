@@ -1,0 +1,375 @@
+/* General Layout */
+.productCard {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Title Container (Aligns H1 and Close Button) */
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Close Button */
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transform: scale(1.5);
+}
+
+/* Header */
+.header {
+  text-align: left;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+  max-width: 1100px;
+}
+
+/* Overview & Role Section */
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 3rem;
+  gap: 20px;
+}
+
+.overview, .role {
+  flex: 1;
+  min-width: 320px;
+  max-width: 1100px;
+}
+
+.role {
+  text-align: right;
+}
+
+.overview h3, .role h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.overview p, .role p {
+  font-size: 1.25rem;
+}
+
+/* Problem Section */
+.problemSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.problemSection h3, .userPersonasSection h3, .solutionSection h3, .userFlowSection h3, .featuresSection h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.25rem;
+  text-align: center; 
+  margin-top: 2.25rem; 
+}
+
+.problemSection p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.problemList {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 2rem; 
+}
+
+.problemList span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #72A814; 
+  margin-right: 20px; 
+}
+
+.problemList h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.problemList p {
+  font-size: 1.25rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.problemImage {
+  max-width: 30%;
+}
+
+.problemSection button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* User Personas */
+.userPersonasSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.userPersonasSection p {
+  font-size: 1.25rem; 
+  text-align: left; 
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Solution Section */
+.solutionSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.solutionSection p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* User Flow */
+.userFlowSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+  margin-bottom: 3rem; 
+}
+
+.userFlowSection p {
+  font-size: 1.25rem; 
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 10rem; 
+  margin-top: 2rem; 
+  max-width: 800px; 
+}
+
+.userFlowImages {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.userFlowSection img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+}
+
+/* Features Section */
+.featuresSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.featuresList p {
+  font-size: 1.5rem;
+  line-height: 2;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+
+.featuresList p:hover, .activeFeature {
+  color: #72A814;
+  font-weight: bold;
+}
+
+.featureImage {
+  flex: 1;
+  margin-top: 1rem;
+}
+
+/* Style Guide Section */
+.styleGuideSection {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.styleGuideSection h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.styleGuideSection img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 0;
+}
+
+.styleGuideSection p {
+  font-size: 1.25rem; 
+  margin-bottom: 1rem; 
+  max-width: 800px; 
+  margin-left: 10rem; 
+}
+
+/* Buttons */
+.tryButton {
+  background: none;
+  border: 2px solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: white; 
+  margin-right: 30px; 
+}
+
+.tryButton:hover {
+  background: rgba(255, 255, 255, 0.25); 
+}
+
+.buttonGroup {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.nextButton {
+  font-size: 2rem;
+  border: none;
+  text-align: right;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  color: white;
+}
+
+.nextButton a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Next Button Icon Styling */
+.svg {
+  transition: transform 0.2s ease-in-out;; 
+  margin-left: 3px; 
+}
+
+.svg:hover  {
+  transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .flexRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .role {
+    text-align: center;
+  }
+
+  .userFlowImages {
+    flex-direction: column;
+  }
+
+  .featuresContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .userFlowImages {
+    flex-direction: column;
+  }
+}
