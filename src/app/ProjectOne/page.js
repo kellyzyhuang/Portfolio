@@ -13,7 +13,7 @@ export default function ProjectOne() {
           <div className={styles.titleContainer}>
             <h1>EXUTOIRE</h1>
             <button className={styles.closeButton}>
-              <Link href="/">
+              <Link href="/Projects">
               <Image src="images/exit.svg" width={28} height={28} alt="exit icon" />
               </Link>
             </button>
