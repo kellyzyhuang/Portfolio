@@ -1,0 +1,69 @@
+@import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
+
+/* General Layout */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: black;
+  color: white;
+  font-family: "Satoshi", sans-serif;
+  text-align: center;
+}
+
+/* Main Content */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 0;
+}
+
+/* Under Construction Message */
+.message {
+  text-align: center;
+}
+
+.message h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.message p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+/* Project Gallery */
+.projectGallery {
+  text-align: center;
+}
+
+.projectGallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projectList {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .message h1 {
+    font-size: 2.5rem;
+  }
+
+  .message p {
+    font-size: 1.25rem;
+  }
+
+  .projectList {
+    flex-direction: column;
+  }
+}
