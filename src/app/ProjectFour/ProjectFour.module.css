@@ -118,7 +118,7 @@
 
 .problemList {
   display: flex;
-  gap: 10px;
+  gap: 15px; 
   align-items: flex-start;
   margin-top: 2rem; 
 }
@@ -181,6 +181,12 @@
   font-size: 2rem;
   cursor: pointer;
   color: white;
+}
+
+.arrowButton:hover {
+  background: #E2BA13; 
+  border-radius: 50px; 
+  padding: 10px; 
 }
 
 /* Solution Section */

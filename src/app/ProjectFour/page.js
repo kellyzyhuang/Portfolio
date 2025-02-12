@@ -153,7 +153,7 @@ export default function ProjectFour() {
               </p>
             </div>
             <div className={styles.featureImage}>
-              <Image src={features[currentFeature - 1]} width={500} height={300} alt={`Feature ${currentFeature}`} />
+              <Image src={features[currentFeature - 1]} width={700} height={500} alt={`Feature ${currentFeature}`} />
             </div>
           </div>
         </section>
