@@ -19,8 +19,8 @@ export default function ProjectFour() {
 
   const features = [
     "/images/feature-1.png",
-    "/images/feature-2.png",
     "/images/feature-3.png",
+    "/images/feature-2.png",
   ];
 
   return (
@@ -50,10 +50,10 @@ export default function ProjectFour() {
             </p>
             <div className={styles.buttonGroup}>
               <button className={styles.tryButton}>
-                <a href="https://wereachout.ca/" target="_blank">View Demo</a>
+                <a href="https://wereachout.ca/" target="_blank">View App</a>
               </button>
               <button className={styles.tryButton}>
-                <a href="https://wereachout.ca/" target="_blank">View App</a>
+                <a href="https://www.figma.com/proto/MfGA57RbqWErt7qTMGdR8c/ReachOut---Design-Draft?node-id=510-2765&t=1a59cB5Dww92vk3T-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=510%3A2765&show-proto-sidebar=1" target="_blank">View Prototype</a>
               </button>
             </div>
           </div>
@@ -122,11 +122,15 @@ export default function ProjectFour() {
 
         <section className={styles.userFlowSection}>
           <h3>User Flow</h3>
-          <div className={styles.userFlowImages}>
-            <Image src="/images/orgo-flow.png" width={450} height={250} alt="Organization User Flow" />
-            <Image src="/images/employer.png" width={450} height={250} alt="Employer User Flow" />
+          <div className={styles.figmaEmbed}>
+            <iframe
+              width="100%"
+              height="600px"
+              src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/board/QQ7OsXhkE0rXtvPwP21aOx/User-Flow---ReachOut?node-id=0-1&p=f&t=UDom7GW0oqRJVDSs-0"
+              allowfullscreen
+            ></iframe>
           </div>
-          <p>Two separate flows were created to address the different needs and demands of the two target groups. The organization flow is focused on making the process of searching, applying, and interviewing for a job seamless and efficient. For employers, the flow is centered around building trust and security.</p>
+          <p>Two different user flows were created to accommodate the target user groups of employers and organization workers.</p>
         </section>
 
         <section className={styles.featuresSection}>
@@ -153,15 +157,43 @@ export default function ProjectFour() {
               </p>
             </div>
             <div className={styles.featureImage}>
-              <Image src={features[currentFeature - 1]} width={700} height={500} alt={`Feature ${currentFeature}`} />
+              <Image
+                src={features[currentFeature - 1]}
+                width={900}  
+                height={600} 
+                alt={`Feature ${currentFeature}`}
+              />
             </div>
           </div>
         </section>
+
 
         <section className={styles.styleGuideSection}>
           <h3>Style Guide</h3>
           <p>The styling of the web app is designed to align with values of trust, connection, and support. By carefully choosing colors and imagery that evoke warmth and security, ReachOut creates an environment where the diverse user base of nonprofit workers, ex-offenders, and employers feels safe and empowered.</p>
           <Image src="/images/styletile.jpg" width={900} height={600} alt="Style Tile" />
+        </section>
+
+        <section className={styles.promotionalMaterialsSection}>
+          <h3>Promotional Materials</h3>
+
+          {/* Printed Materials Section */}
+          <div className={styles.printedMaterials}>
+            <h4>Printed Materials</h4>
+            <div className={styles.materialGallery}>
+              <Image src="/images/business-card-mockup.png" width={600} height={400} alt="Printed Material 1" />
+              <Image src="/images/brochure-mockup.png" width={600} height={400} alt="Printed Material 2" />
+            </div>
+          </div>
+
+          {/* Advertisement Video Section */}
+          <div className={styles.advertisementVideo}>
+            <h4>Advertisement Video</h4>
+            <video controls className={styles.videoPlayer}>
+              <source src="/videos/reachout-final-2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </section>
 
         <div className={styles.buttonGroup}>
