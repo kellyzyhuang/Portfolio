@@ -28,21 +28,15 @@ export default function Projects() {
       <header className={styles.header}>
         <h1>Projects</h1>
         <nav className={styles.chipNav}>
-          <button className={styles.chip} onClick={() => setFilter("All")}>
-            All
-          </button>
-          <button className={styles.chip} onClick={() => setFilter("UI/UX Design")}>
-            UI/UX Design
-          </button>
-          <button className={styles.chip} onClick={() => setFilter("Graphic Design")}>
-            Graphic Design
-          </button>
-          <button className={styles.chip} onClick={() => setFilter("Motion Graphics")}>
-            Motion Graphics
-          </button>
-          <button className={styles.chip} onClick={() => setFilter("Development")}>
-            Development
-          </button>
+          {["All", "UI/UX Design", "Graphic Design", "Motion Graphics", "Development"].map((category) => (
+            <button
+              key={category}
+              className={`${styles.chip} ${filter === category ? styles.activeChip : ""}`}
+              onClick={() => setFilter(category)}
+            >
+              {category}
+            </button>
+          ))}
         </nav>
       </header>
       <main className={styles.main}>

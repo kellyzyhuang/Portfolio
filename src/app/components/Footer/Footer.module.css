@@ -1,28 +1,25 @@
 @import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
 
-/* Footer Layout */
 .footer {
   display: flex;
-  justify-content: space-between; /* Ensures logo is on the left and social links on the right */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1400px; /* Prevents excessive stretching */
+  max-width: 1400px; 
   padding: 20px 60px;
-  margin: 0 auto; /* Ensures footer stays centered */
+  margin: 0 auto; 
   background: black;
   color: white;
   font-family: "Satoshi", sans-serif;
 }
 
-/* Left Side (Logo) */
 .left {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Ensures logo is pushed to the left */
+  justify-content: flex-start; 
 }
 
-/* Right Side (Text & Icons) */
 .right {
   display: flex;
   flex-direction: column;
@@ -34,7 +31,6 @@
   font-weight: bold;
 }
 
-/* Icons */
 .icons {
   display: flex;
   gap: 15px;
@@ -50,7 +46,6 @@
   color: #f2f2f2;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer {
     flex-direction: row;
