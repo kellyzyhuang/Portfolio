@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import Image from "next/image";
-import styles from "./ProjectThree.module.css"; 
+import styles from "./ProjectSix.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
 
@@ -21,13 +21,13 @@ export default function ProjectThree() {
           <h2>Poster Design</h2>
         </header>
         <section className={styles.banner}>
-          <Image src="/images/finding-aurora.png" width={900} height={350} alt="banner"/>
+          <Image src="/images/carepanda.png" width={900} height={350} alt="banner"/>
         </section>
 
         <section className={styles.flexRow}>
           <div className={styles.overview}>
             <h3>Overview</h3>
-            <p>Finding Aurora is an interactive, educational e-book designed for children ages 3+. They join a polar bear named Aurora on her journey to learn about and see the Aurora borealis. Through meeting new characters, readers learn various animal facts while being encouraged to practice healthy habits and self care.</p>
+            <p>CarePanda.</p>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>
