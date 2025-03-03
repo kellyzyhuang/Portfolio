@@ -14,7 +14,9 @@ export default function Footer() {
         <div className={styles.icons}>
           <a href="https://www.linkedin.com/in/kelly-huang-236b8932b/" target="_blank"><Image src="/images/linkedin.svg" width={24} height={24} alt="linkedin icon" /></a>
           <a href="https://github.com/kellyzyhuang" target="_blank"><Image src="/images/github.svg" width={24} height={24} alt="github icon"  /></a>
-          <a href="mailto:kellyziyanhuang@gmail.com"><Image src="/images/mail.svg" width={24} height={24} alt="mail icon"  /></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kellyziyanhuang@gmail.com" target="_blank" rel="noopener noreferrer">
+            <Image src="/images/mail.svg" width={24} height={24} alt="mail icon" />
+          </a>
         </div>
       </div>
     </footer>

@@ -1,0 +1,250 @@
+@import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
+
+/* General Layout */
+.productCard {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Title Container (Aligns H1 and Close Button) */
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Close Button */
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transform: scale(1.5); 
+}
+
+/* Header */
+.header {
+  text-align: left;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-width: 1100px;
+}
+
+/* Overview & Role Section */
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 2rem;
+  margin-top: 2rem; 
+}
+
+.overview, .role {
+  flex: 1;
+  min-width: 320px;
+}
+
+.role {
+  text-align: right;
+}
+
+.overview h3, .role h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 15px; 
+}
+
+.overview p, .role p {
+  font-size: 1.25rem; 
+}
+
+/* Section Headers */
+.sectionHeader {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.sectionHeader h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.25rem;
+}
+
+/* Image Gallery */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+/* Buttons */
+.tryButton, .nextButton {
+  background: none;
+  border: 2px solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: white; 
+}
+
+.tryButton:hover {
+  background: rgba(255, 255, 255, 0.25); 
+}
+
+/* Next Project Button with Arrows */
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.nextButton {
+  font-size: 2rem;
+  border: none;
+  text-align: right;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  color: white;
+}
+
+.nextButton a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Next Button Icon Styling */
+.svg {
+  transition: transform 0.2s ease-in-out;; 
+  margin-left: 3px; 
+}
+
+.svg:hover  {
+  transform: translateX(5px);
+}
+
+.designSuccess {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.paraTwo {
+  margin-top: 1rem; 
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+  .productCard {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .flexRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .role {
+    text-align: center;
+  }
+
+  .gallery {
+    gap: 20px;
+  }
+
+  .nextButton {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .productCard {
+    max-width: 1200px;
+  }
+
+  .banner img, .gallery, .buttonGroup {
+    max-width: 1200px;
+  }
+
+  .nextButton {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 5120px) {
+  .productCard {
+    max-width: 1400px;
+  }
+
+  .banner img, .gallery, .buttonGroup, .flexRow {
+    max-width: 1400px;
+  }
+}

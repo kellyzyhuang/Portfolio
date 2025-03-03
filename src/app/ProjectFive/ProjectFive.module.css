@@ -99,7 +99,7 @@
 }
 
 .sectionHeader h3 {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 2.25rem;
 }
@@ -127,6 +127,38 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Assets Section */
+.assetsSection {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.assetsSection h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for assets */
+.assetsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.assetsGrid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.assetsGrid img:hover {
+  transform: scale(1.05);
+}
+
 
 /* Buttons */
 .tryButton, .nextButton {

@@ -14,7 +14,7 @@ export default function ProjectFive() {
             <h1>Green City</h1>
             <button className={styles.closeButton}>
               <Link href="/Projects">
-              <Image src="images/exit.svg" width={28} height={28} alt="exit icon" />
+              <Image src="/images/exit.svg" width={28} height={28} alt="exit icon" />
               </Link>
             </button>
           </div>
@@ -51,6 +51,17 @@ export default function ProjectFive() {
               Your browser does not support the video tag.
             </video>
         </div>
+
+        {/* Assets */}
+        <section className={styles.assetsSection}>
+          <h3>Project Assets</h3>
+          <div className={styles.assetsGrid}>
+            <Image src="/images/planets.png" width={300} height={200} alt="Asset 1" />
+            <Image src="/images/building.png" width={300} height={200} alt="Asset 2" />
+            <Image src="/images/traffic.png" width={300} height={200} alt="Asset 3" />
+            <Image src="/images/city.png" width={300} height={200} alt="Asset 4" />
+          </div>
+        </section>
 
         {/* Next Project Button */}
         <div className={styles.buttonGroup}>

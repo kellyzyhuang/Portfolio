@@ -33,6 +33,12 @@
   color: #72A814;
 }
 
+.navList li a.active {
+  color: #72A814;
+  font-weight: bold;
+}
+
+
 /* Logo */
 .logo {
   width: 60px;
