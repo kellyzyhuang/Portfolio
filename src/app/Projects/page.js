@@ -15,6 +15,7 @@ export default function Projects() {
     { id: 2, title: "Project Two", src: "/images/hivefiveCover.png", categories: ["UI/UX Design", "Development"], link: "/ProjectTwo" },
     { id: 3, title: "Project Three", src: "/images/aurora-cover.png", categories: ["Graphic Design"], link: "/ProjectThree" },
     { id: 4, title: "Project Four", src: "/images/reachout-cover.png", categories: ["UI/UX Design", "Development"], link: "/ProjectFour" },
+    { id: 5, title: "Project Five", src: "/images/GreenCity.png", categories: ["Motion Graphics"], link: "/ProjectFive" },
   ];
 
   const filteredProjects =
