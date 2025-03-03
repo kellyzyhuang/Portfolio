@@ -118,7 +118,7 @@
 
 .problemList {
   display: flex;
-  gap: 15px; 
+  gap: 50px; 
   align-items: flex-start;
   margin-top: 2rem; 
 }

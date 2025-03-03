@@ -170,8 +170,8 @@ export default function ProjectFour() {
 
         <section className={styles.styleGuideSection}>
           <h3>Style Guide</h3>
-          <p>The styling of the web app is designed to align with values of trust, connection, and support. By carefully choosing colors and imagery that evoke warmth and security, ReachOut creates an environment where the diverse user base of nonprofit workers, ex-offenders, and employers feels safe and empowered.</p>
           <Image src="/images/styletile.jpg" width={900} height={600} alt="Style Tile" />
+          <p>The styling of the web app is designed to align with values of trust, connection, and support. By carefully choosing colors and imagery that evoke warmth and security, ReachOut creates an environment where the diverse user base of nonprofit workers, ex-offenders, and employers feels safe and empowered.</p>
         </section>
 
         <section className={styles.promotionalMaterialsSection}>
