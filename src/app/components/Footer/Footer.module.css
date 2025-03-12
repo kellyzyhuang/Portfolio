@@ -8,8 +8,8 @@
   max-width: 1400px; 
   padding: 20px 60px;
   margin: 0 auto; 
-  background: black;
-  color: white;
+  background: var(--background);
+  color: var(--white);
   font-family: "Satoshi", sans-serif;
 }
 
@@ -32,19 +32,28 @@
 }
 
 .icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
+  margin-top: 1rem; 
+  margin-left: 3rem;
 }
 
 .icons a {
-  color: white;
+  color: var(--white);
   transition: color 0.2s ease-in-out;
+  margin-right: 10px; 
 }
 
 .icons a:hover {
-  color: #f2f2f2;
+  color: var(--green);
 }
+
+.icon {
+  transition: color 0.2s ease-in-out;
+}
+
+.icon:hover {
+  color: var(--green);
+}
+
 
 @media (max-width: 768px) {
   .footer {

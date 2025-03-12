@@ -1,6 +1,5 @@
 @import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
 
-/* General Layout */
 .productCard {
   max-width: 1100px;
   width: 100%;
@@ -12,7 +11,6 @@
   padding: 2rem 0;
 }
 
-/* Title Container (Aligns H1 and Close Button) */
 .titleContainer {
   display: flex;
   justify-content: space-between;
@@ -20,32 +18,34 @@
   width: 100%;
 }
 
-/* Close Button */
 .closeButton {
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
-  transform: scale(1.5); 
+  color: var(--white);  
+  transition: color 0.2s ease-in-out;
 }
 
-/* Header */
+.closeButton:hover {
+  color: var(--yellow); 
+}
+
 .header {
   text-align: left;
   width: 100%;
 }
 
 .header h1 {
-  font-size: 4rem;
+  font: var(--header-one);
   margin-bottom: 5px;
+  margin-left: -5px; 
 }
 
-.header h2 {
-  font-size: 1.5rem;
+.header h4 {
+  font: var(--header-four);
   margin-bottom: 2rem;
 }
 
-/* Banner */
 .banner {
   width: 100%;
   max-width: 1100px;
@@ -60,7 +60,7 @@
   max-width: 1100px;
 }
 
-/* Overview & Role Section */
+/* overview section */
 .flexRow {
   display: flex;
   justify-content: space-between;
@@ -81,16 +81,15 @@
 }
 
 .overview h3, .role h3 {
-  font-size: 2rem;
+  font: var(--header-three); 
   margin-bottom: 15px;
   margin-top: 15px; 
 }
 
 .overview p, .role p {
-  font-size: 1.25rem; 
+  font: var(--paragraph); 
 }
 
-/* Section Headers */
 .sectionHeader {
   width: 100%;
   max-width: 1100px;
@@ -98,13 +97,11 @@
   margin-top: 3rem;
 }
 
-.sectionHeader h3 {
-  font-size: 3rem;
-  font-weight: bold;
+.sectionHeader h2 {
+  font: var(--header-two); 
   margin-bottom: 2.25rem;
 }
 
-/* Image Gallery */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -121,66 +118,21 @@
   border-radius: 15px;
 }
 
-/* Buttons */
-.tryButton, .nextButton {
-  background: none;
-  border: 2px solid white;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 12px 18px;
-  margin-top: 30px;
-  cursor: pointer;
-  color: white; 
-}
-
-.tryButton:hover {
-  background: rgba(255, 255, 255, 0.25); 
-}
-
-/* Next Project Button with Arrows */
-.buttonGroup {
+.buttonContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; 
+  align-items: center;
   width: 100%;
   max-width: 1100px;
-}
-
-.nextButton {
-  font-size: 2rem;
-  border: none;
-  text-align: right;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  color: white;
-}
-
-.nextButton a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Next Button Icon Styling */
-.svg {
-  transition: transform 0.2s ease-in-out;; 
-  margin-left: 3px; 
-}
-
-.svg:hover  {
-  transform: translateX(5px);
+  margin: 5rem auto 3rem; 
+  padding: 0; 
 }
 
 .designSuccess {
   width: 100%;
   max-width: 1100px;
   text-align: left;
-  font-size: 1.25rem;
+  font: var(--paragraph); 
   line-height: 1.6;
   margin-top: 2rem;
   padding: 1rem 0;
@@ -190,7 +142,6 @@
   margin-top: 1rem; 
 }
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: center;
@@ -198,7 +149,7 @@
   padding: 20px 0;
 }
 
-/* Responsive Adjustments */
+/* responsiveness */
 @media (max-width: 1440px) {
   .productCard {
     max-width: 90vw;

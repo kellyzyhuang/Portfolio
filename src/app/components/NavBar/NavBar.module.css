@@ -7,8 +7,8 @@
   align-items: center;
   padding: 20px 60px;
   width: 100%;
-  background: black;
-  color: white;
+  background: var(--background);
+  color: var(--white);
   font-family: "Satoshi", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -25,16 +25,16 @@
 
 .navList li a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   transition: color 0.2s ease-in-out;
 }
 
 .navList li a:hover {
-  color: #72A814;
+  color: var(--green);
 }
 
 .navList li a.active {
-  color: #72A814;
+  color: var(--green);
   font-weight: bold;
 }
 

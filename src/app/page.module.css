@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  background: black;
-  color: white;
+  background: var(--black);
+  color: var(--white);
   font-family: "Satoshi", sans-serif;
   text-align: center;
   cursor: none;
@@ -23,7 +23,7 @@
   margin-bottom: 100px; 
 }
 
-/* Left Section - Introduction */
+/* left section */
 .intro {
   flex: 1;
   text-align: left;
@@ -31,15 +31,15 @@
 
 .greeting {
   font-size: 1.2rem;
-  color: #f4f4f4;
+  color: var(--white);
 }
 
 .descriptor {
-  color: rgb(114, 168, 20)!important; 
+  color: var(--green)!important; 
 }
 
 .highlight {
-  color: #E2BA13!important; 
+  color: var(--yellow)!important; 
   font-style: italic; 
 }
 
@@ -50,7 +50,7 @@
 
 .intro p {
   font-size: 1.5rem;
-  color: white;
+  color: var(--white);
   font-weight: bold; 
 }
 
@@ -63,7 +63,7 @@
   margin-right: 20px;
   font-size: 0.9rem;
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 .links a:hover {
@@ -128,5 +128,5 @@
 .hoverLabel {
   margin-top: 20px;
   font-size: 1.2rem;
-  color: white;
+  color: var(--white);
 }

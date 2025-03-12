@@ -3,8 +3,10 @@ import Image from "next/image";
 import styles from "./ProjectSix.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import NextButton from "../components/NextButton";
+import PrevButton from "../components/PrevButton";
 
-export default function ProjectThree() {
+export default function ProjectSix() {
   return (
     <>
       <NavBar />
@@ -14,11 +16,11 @@ export default function ProjectThree() {
             <h1>CarePanda</h1>
             <button className={styles.closeButton}>
               <Link href="/Projects">
-              <Image src="images/exit.svg" width={28} height={28} alt="exit icon" />
+              <Image src="images/exit.svg" width={38} height={38} alt="exit icon" />
               </Link>
             </button>
           </div>
-          <h2>Poster Design</h2>
+          <h4>Poster Design</h4>
         </header>
         <section className={styles.banner}>
           <Image src="/images/carepanda.png" width={900} height={350} alt="banner"/>
@@ -39,12 +41,10 @@ export default function ProjectThree() {
           </div>
         </section>
 
-        {/* Example Screens Header */}
         <section className={styles.sectionHeader}>
-          <h3>Example Screens</h3>
+          <h2>Example Screens</h2>
         </section>
 
-        {/* Image Gallery */}
         <section className={styles.gallery}>
           <Image src="/images/aurora-1.png" width={900} height={500} alt="one"/>
           <Image src="/images/aurora-2.png" width={900} height={500} alt="two"/>
@@ -56,13 +56,9 @@ export default function ProjectThree() {
           <p className={styles.paraTwo}>It combines age-appropriate language, engaging motion graphics, and sound to create an immersive experience suitable for parents at home or for educators in the classroom!</p>
         </section>
 
-        {/* Next Project Button with Arrows */}
-        <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}>
-            <Link href="/ProjectFour">
-              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg} />
-            </Link>
-          </button>
+        <div className={styles.buttonContainer}>
+          <PrevButton href="/ProjectTwo" label="Previous Project" />
+          <NextButton href="/ProjectOne" label="Next Project" />
         </div>
       </main>
       <Footer />
