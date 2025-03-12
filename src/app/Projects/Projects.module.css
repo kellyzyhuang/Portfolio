@@ -6,42 +6,103 @@
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  background: black;
-  color: white;
+  background: var(--background);
+  color: var(--white);
   font-family: "Satoshi", sans-serif;
   text-align: center;
 }
 
 .projectList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
+  justify-content: center;
 }
 
-.projectList a {
+.projectCard {
+  max-width: 280px; 
+  height: 350px; 
+  background: none;
+  border-radius: 10px;
+  border: 1px solid var(--white); 
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: 100%; 
+}
+
+.imageContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #222;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 5px;
 }
 
-.projectList img {
+.projectImage {
+  width: 100%;
+  max-height: 150px;
+  border-radius: 5px;
   object-fit: cover;
-  border-radius: 10px;
 }
 
-.projectList img:hover {
-  border: 2px solid #E2BA13; 
+.projectInfo {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.toolsAndArrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 10px 0;
+}
+
+.toolsUsed {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toolChip {
+  background: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid var(--white);
+}
+
+.arrowIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.arrowIcon:hover {
+  transform: translateX(5px); 
 }
 
 .header {
   width: 100%;
   padding: 40px 20px;
   text-align: center;
-  background: black;
+  background: var(--background);
 }
 
 .header h1 {
@@ -58,8 +119,8 @@
 
 .chip {
   background: none;
-  color: white;
-  border: 2px solid rgb(114, 168, 20);
+  color: var(--white);
+  border: 1px solid var(--white);
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 20px;
@@ -69,10 +130,10 @@
 }
 
 .chip:hover {
-  background: rgb(114, 168, 20);
+  border: 1px solid var(--green);
 }
 
 .activeChip {
-  background: rgb(114, 168, 20);
-  color: black;
+  border: 1px solid var(--green);
+  color: white;
 }

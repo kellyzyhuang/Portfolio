@@ -6,16 +6,17 @@ import NavBar from "../components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
 
   const projects = [
-    { id: 1, title: "Project One", src: "/images/exutoireCover.png", categories: ["UI/UX Design", "Development"], link: "/ProjectOne" },
-    { id: 2, title: "Project Two", src: "/images/hivefiveCover.png", categories: ["UI/UX Design", "Development"], link: "/ProjectTwo" },
-    { id: 3, title: "Project Three", src: "/images/aurora-cover.png", categories: ["Graphic Design"], link: "/ProjectThree" },
-    { id: 4, title: "Project Four", src: "/images/reachout-cover.png", categories: ["UI/UX Design", "Development"], link: "/ProjectFour" },
-    { id: 5, title: "Project Five", src: "/images/GreenCity.png", categories: ["Motion Graphics"], link: "/ProjectFive" },
+    { id: 1, title: "Exutoire", description: "Web App Design & Development", src: "/images/exutoire-project-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectOne" },
+    { id: 2, title: "HiveFive", description: "Web App Design & Development", src: "/images/hivefive-project-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectTwo" },
+    { id: 3, title: "Finding Aurora", description: "Children's E-Book", src: "/images/aurora-cover.png", categories: ["Graphic Design"], tools: ["Illustrator", "InDesign", "After Effects"], link: "/ProjectThree" },
+    { id: 4, title: "ReachOut", description: "Web App Design & Development", src: "/images/reachout-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectFour" },
+    { id: 5, title: "Green City", description: "Motion Graphic", src: "/images/greencity-project-cover.png", categories: ["Motion Graphics"], tools: ["After Effects", "Illustrator"], link: "/ProjectFive" },
   ];
 
   const filteredProjects =
@@ -44,8 +45,26 @@ export default function Projects() {
         <section className={styles.projectGallery}>
           <div className={styles.projectList}>
             {filteredProjects.map((project) => (
-              <Link key={project.id} href={project.link}>
-                <Image src={project.src} alt={project.title} width={250} height={150} />
+              <Link key={project.id} href={project.link} className={styles.projectCard}>
+                <div className={styles.cardContent}>
+                  <div className={styles.imageContainer}>
+                    <Image src={project.src} alt={project.title} width={250} height={150} tyle={{ objectFit: "cover", width: "100%", height: "auto" }} className={styles.projectImage} />
+                  </div>
+                  <div className={styles.projectInfo}>
+                    <h2>{project.title}</h2>
+                    <p className={styles.description}>{project.description}</p>
+                    <div className={styles.toolsAndArrow}>
+                      <div className={styles.toolsUsed}>
+                        {project.tools.map((tool, index) => (
+                          <span key={index} className={styles.toolChip}>{tool}</span>
+                        ))}
+                      </div>
+                      <div className={styles.arrowIcon}>
+                        <IoArrowForwardCircleOutline size={35} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
