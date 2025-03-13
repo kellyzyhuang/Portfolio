@@ -13,6 +13,18 @@ import Cursor from "../components/Cursor";
 export default function ProjectFour() {
   const [currentFeature, setCurrentFeature] = useState(1);
   const [currentPersona, setCurrentPersona] = useState(0);
+  const [currentSection, setCurrentSection] = useState("overview");
+
+  const sections = [
+    { id: "overview", title: "Overview" },
+    { id: "problem-identification", title: "Problem Identification" },
+    { id: "user-personas", title: "User Personas" },
+    { id: "solution", title: "Solution" },
+    { id: "user-flow", title: "User Flow" },
+    { id: "features", title: "Features" },
+    { id: "style-guide", title: "Style Guide" },
+    { id: "promotional-materials", title: "Promotional Materials" },
+  ];
 
   const personas = [
     "/images/reachout-persona-1.png",
@@ -26,6 +38,8 @@ export default function ProjectFour() {
     "/images/feature-3.png",
     "/images/feature-2.png",
   ];
+
+
 
   return (
     <>
