@@ -13,11 +13,11 @@ export default function Projects() {
   const [filter, setFilter] = useState("All");
 
   const projects = [
-    { id: 1, title: "Exutoire", description: "Web App Design & Development", src: "/images/exutoire-project-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectOne" },
-    { id: 2, title: "HiveFive", description: "Web App Design & Development", src: "/images/hivefive-project-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectTwo" },
+    { id: 1, title: "Exutoire", description: "Bakery Website", src: "/images/exutoire-project-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectOne" },
+    { id: 2, title: "HiveFive", description: "Bee Conservation App", src: "/images/hivefive-project-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectTwo" },
     { id: 3, title: "Finding Aurora", description: "Children's E-Book", src: "/images/aurora-cover.png", categories: ["Graphic Design"], tools: ["Illustrator", "InDesign", "After Effects"], link: "/ProjectThree" },
-    { id: 4, title: "ReachOut", description: "Web App Design & Development", src: "/images/reachout-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectFour" },
-    { id: 5, title: "Green City", description: "Motion Graphic", src: "/images/greencity-project-cover.png", categories: ["Motion Graphics"], tools: ["After Effects", "Illustrator"], link: "/ProjectFive" },
+    { id: 4, title: "ReachOut", description: "Fair-Chance Employment Web App", src: "/images/reachout-cover.png", categories: ["UI/UX Design", "Development"], tools: ["Figma", "NextJS"], link: "/ProjectFour" },
+    { id: 5, title: "Green City", description: "Sustainable City Motion Graphic", src: "/images/greencity-project-cover.png", categories: ["Motion Graphics"], tools: ["After Effects", "Illustrator"], link: "/ProjectFive" },
   ];
 
   const filteredProjects =
