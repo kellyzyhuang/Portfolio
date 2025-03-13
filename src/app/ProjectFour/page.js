@@ -62,6 +62,22 @@ export default function ProjectFour() {
     <>
       <NavBar />
       <Cursor />
+      <div className={styles.container}>
+        <nav className={styles.sidebar}>
+          <ul>
+            {sections.map((section) => (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  className={currentSection === section.id ? styles.active : ""}
+                >
+                  {section.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
