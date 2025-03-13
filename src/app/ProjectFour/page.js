@@ -1,6 +1,6 @@
 "use client"; 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectFour.module.css";
@@ -39,7 +39,24 @@ export default function ProjectFour() {
     "/images/feature-2.png",
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = "overview";
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            current = section.id;
+          }
+        }
+      });
+      setCurrentSection(current);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
