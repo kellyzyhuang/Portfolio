@@ -1,13 +1,19 @@
+"use client"; 
+
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectThree.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import NextButton from "../components/NextButton";
+import PrevButton from "../components/PrevButton";
+import Cursor from "../components/Cursor";
 
 export default function ProjectThree() {
   return (
     <>
       <NavBar />
+      <Cursor />
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
@@ -40,12 +46,10 @@ export default function ProjectThree() {
           </div>
         </section>
 
-        {/* Example Screens Header */}
         <section className={styles.sectionHeader}>
           <h3>Example Screens</h3>
         </section>
 
-        {/* Image Gallery */}
         <section className={styles.gallery}>
           <Image src="/images/aurora-1.png" width={900} height={500} alt="one"/>
           <Image src="/images/aurora-2.png" width={900} height={500} alt="two"/>
@@ -57,13 +61,9 @@ export default function ProjectThree() {
           <p className={styles.paraTwo}>It combines age-appropriate language, engaging motion graphics, and sound to create an immersive experience suitable for parents at home or for educators in the classroom!</p>
         </section>
 
-        {/* Next Project Button with Arrows */}
-        <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}>
-            <Link href="/ProjectFour">
-              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg} />
-            </Link>
-          </button>
+        <div className={styles.buttonContainer}>
+          <PrevButton href="/ProjectTwo" label="Previous Project" />
+          <NextButton href="/ProjectFour" label="Next Project" />
         </div>
       </main>
       <Footer />

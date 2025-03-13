@@ -1,6 +1,5 @@
 @import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
 
-/* General Layout */
 .productCard {
   max-width: 1100px;
   width: 100%;
@@ -12,7 +11,6 @@
   padding: 2rem 0;
 }
 
-/* Title Container (Aligns H1 and Close Button) */
 .titleContainer {
   display: flex;
   justify-content: space-between;
@@ -20,16 +18,14 @@
   width: 100%;
 }
 
-/* Close Button */
 .closeButton {
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: var(--white);
   transform: scale(1.5); 
 }
 
-/* Header */
 .header {
   text-align: left;
   width: 100%;
@@ -45,7 +41,6 @@
   margin-bottom: 2rem;
 }
 
-/* Banner */
 .banner {
   width: 100%;
   max-width: 1100px;
@@ -60,7 +55,6 @@
   max-width: 1100px;
 }
 
-/* Overview & Role Section */
 .flexRow {
   display: flex;
   justify-content: space-between;
@@ -90,7 +84,6 @@
   font-size: 1.25rem; 
 }
 
-/* Section Headers */
 .sectionHeader {
   width: 100%;
   max-width: 1100px;
@@ -104,7 +97,6 @@
   margin-bottom: 2.25rem;
 }
 
-/* Image Gallery */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -117,12 +109,12 @@
 .gallery img {
   width: 100%;
   height: auto;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   border-radius: 15px;
 }
 
 /* Buttons */
-.tryButton, .nextButton {
+.tryButton {
   background: none;
   border: 2px solid white;
   font-size: 1rem;
@@ -138,42 +130,14 @@
   background: rgba(255, 255, 255, 0.25); 
 }
 
-/* Next Project Button with Arrows */
-.buttonGroup {
+.buttonContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; 
+  align-items: center;
   width: 100%;
   max-width: 1100px;
-}
-
-.nextButton {
-  font-size: 2rem;
-  border: none;
-  text-align: right;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  color: white;
-}
-
-.nextButton a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Next Button Icon Styling */
-.svg {
-  transition: transform 0.2s ease-in-out;; 
-  margin-left: 3px; 
-}
-
-.svg:hover  {
-  transform: translateX(5px);
+  margin: 5rem auto 3rem; 
+  padding: 0; 
 }
 
 .designSuccess {
@@ -190,7 +154,6 @@
   margin-top: 1rem; 
 }
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: center;
@@ -198,7 +161,6 @@
   padding: 20px 0;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1440px) {
   .productCard {
     max-width: 90vw;

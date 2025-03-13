@@ -1,13 +1,19 @@
+"use client"; 
+
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectTwo.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import NextButton from "../components/NextButton";
+import PrevButton from "../components/PrevButton";
+import Cursor from "../components/Cursor";
 
 export default function ProjectTwo() {
   return (
     <>
       <NavBar />
+      <Cursor />
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
@@ -40,12 +46,10 @@ export default function ProjectTwo() {
           </div>
         </section>
 
-        {/* Example Screens Header */}
         <section className={styles.sectionHeader}>
           <h3>Example Screens</h3>
         </section>
 
-        {/* Image Gallery */}
         <section className={styles.gallery}>
           <Image src="/images/bee-1.png" width={130} height={300} alt="one" />
           <Image src="/images/bee-2.png" width={130} height={300} alt="two" />
@@ -55,13 +59,11 @@ export default function ProjectTwo() {
           <Image src="/images/bee-6.png" width={130} height={300} alt="six" />
         </section>
 
-        {/* What Makes This Design Successful? */}
         <section className={styles.designSuccess}>
           <p>HiveFive uses gamification to make conservation efforts more engaging. By allowing users to support bee sustainability through interactive quizzes, the app encourages participation without requiring financial contributions. The fun and educational approach helps raise awareness about bees while providing users with a sense of achievement.</p>
           <p>The visual design reinforces this mission by using warm, nature-inspired colors and a customizable mascot to create an inviting experience. By combining interactive learning with a rewarding donation system, HiveFive motivates users to take part in meaningful environmental impact.</p>
         </section>
 
-        {/* Style Guide Section */}
         <section className={styles.styleGuide}>
           <div className={styles.styleGuideImages}>
             <div className={styles.imageContainer}>
@@ -81,13 +83,9 @@ export default function ProjectTwo() {
           </button>
         </section>
 
-        {/* Next Project Button with Arrows */}
-        <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}>
-            <Link href="/ProjectThree">
-              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg}  />
-            </Link>
-          </button>
+        <div className={styles.buttonContainer}>
+          <PrevButton href="/ProjectOne" label="Previous Project" />
+          <NextButton href="/ProjectThree" label="Next Project" />
         </div>
       </main>
       <Footer />

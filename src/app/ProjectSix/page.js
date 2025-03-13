@@ -1,3 +1,5 @@
+"use client"; 
+
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectSix.module.css"; 
@@ -5,11 +7,13 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import NextButton from "../components/NextButton";
 import PrevButton from "../components/PrevButton";
+import Cursor from "../components/Cursor";
 
 export default function ProjectSix() {
   return (
     <>
       <NavBar />
+      <Cursor />
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>

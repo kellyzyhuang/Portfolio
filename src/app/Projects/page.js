@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import Cursor from "../components/Cursor";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
@@ -27,6 +28,7 @@ export default function Projects() {
   return (
     <div className={styles.page}>
       <NavBar />
+      <Cursor />
       <header className={styles.header}>
         <h1>Projects</h1>
         <nav className={styles.chipNav}>

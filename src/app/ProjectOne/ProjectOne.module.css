@@ -122,58 +122,31 @@
 }
 
 /* Buttons */
-.tryButton, .nextButton {
+.buttonContainer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 5rem auto 3rem; 
+  padding: 0; 
+}
+
+.tryButton {
   background: none;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   font-size: 1rem;
   font-weight: bold;
   border-radius: 10px;
   padding: 12px 18px;
   margin-top: 30px;
   cursor: pointer;
-  color: white; 
+  color: var(--white); 
+  margin-right: 30px; 
 }
 
 .tryButton:hover {
   background: rgba(255, 255, 255, 0.25); 
-}
-
-/* Next Project Button with Arrows */
-.buttonGroup {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  max-width: 1100px;
-}
-
-.nextButton {
-  font-size: 2rem;
-  border: none;
-  text-align: right;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  color: white;
-}
-
-.nextButton a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Next Button Icon Styling */
-.svg {
-  transition: transform 0.2s ease-in-out;; 
-  margin-left: 3px; 
-}
-
-.svg:hover  {
-  transform: translateX(5px);
 }
 
 /* Footer */

@@ -1,13 +1,19 @@
+"use client"; 
+
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectFive.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import NextButton from "../components/NextButton";
+import PrevButton from "../components/PrevButton";
+import Cursor from "../components/Cursor";
 
 export default function ProjectFive() {
   return (
     <>
       <NavBar />
+      <Cursor />
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
@@ -39,12 +45,10 @@ export default function ProjectFive() {
           </div>
         </section>
 
-        {/* Video Header */}
         <section className={styles.sectionHeader}>
           <h3>Final Video</h3>
         </section>
 
-        {/* Video */}
         <div className={styles.advertisementVideo}>
             <video controls className={styles.videoPlayer}>
               <source src="/videos/Kelly_Huang_Final_Project.mp4" type="video/mp4" />
@@ -52,7 +56,6 @@ export default function ProjectFive() {
             </video>
         </div>
 
-        {/* Assets */}
         <section className={styles.assetsSection}>
           <h3>Project Assets</h3>
           <div className={styles.assetsGrid}>
@@ -63,13 +66,9 @@ export default function ProjectFive() {
           </div>
         </section>
 
-        {/* Next Project Button */}
-        <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}>
-            <Link href="/ProjectFour">
-              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg} />
-            </Link>
-          </button>
+        <div className={styles.buttonContainer}>
+          <PrevButton href="/ProjectFour" label="Previous Project" />
+          <NextButton href="/Projects" label="Next Project" />
         </div>
       </main>
       <Footer />

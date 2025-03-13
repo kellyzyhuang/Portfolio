@@ -1,13 +1,19 @@
+"use client"; 
+
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectOne.module.css"; 
 import Footer from "../components/Footer";
 import Link from "next/link";
+import NextButton from "../components/NextButton";
+import PrevButton from "../components/PrevButton";
+import Cursor from "../components/Cursor";
 
 export default function ProjectOne() {
   return (
     <>
       <NavBar />
+      <Cursor />
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
@@ -40,25 +46,19 @@ export default function ProjectOne() {
           </div>
         </section>
 
-        {/* Example Screens Header */}
         <section className={styles.sectionHeader}>
           <h3>Example Screens</h3>
         </section>
 
-        {/* Image Gallery */}
         <section className={styles.gallery}>
           <Image src="/images/exutoireOne.png" width={900} height={500} alt="one"/>
           <Image src="/images/exutoireTwo.png" width={900} height={500} alt="two"/>
           <Image src="/images/exutoireThree.png" width={900} height={500} alt="three"/>
         </section>
 
-        {/* Next Project Button with Arrows */}
-        <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}>
-            <Link href="/ProjectTwo">
-              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg}/>
-            </Link>
-          </button>
+        <div className={styles.buttonContainer}>
+          <PrevButton href="/ProjectFive" label="Previous Project" />
+          <NextButton href="/ProjectTwo" label="Next Project" />
         </div>
       </main>
       <Footer />

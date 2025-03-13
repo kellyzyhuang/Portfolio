@@ -1,10 +1,14 @@
 "use client"; 
+
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectFour.module.css";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import NextButton from "../components/NextButton";
+import PrevButton from "../components/PrevButton";
+import Cursor from "../components/Cursor";
 
 export default function ProjectFour() {
   const [currentFeature, setCurrentFeature] = useState(1);
@@ -26,6 +30,7 @@ export default function ProjectFour() {
   return (
     <>
       <NavBar />
+      <Cursor />
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
@@ -127,7 +132,7 @@ export default function ProjectFour() {
               width="100%"
               height="600px"
               src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/board/QQ7OsXhkE0rXtvPwP21aOx/User-Flow---ReachOut?node-id=0-1&p=f&t=UDom7GW0oqRJVDSs-0"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <p>Two different user flows were created to accommodate the target user groups of employers and organization workers.</p>
@@ -167,7 +172,6 @@ export default function ProjectFour() {
           </div>
         </section>
 
-
         <section className={styles.styleGuideSection}>
           <h3>Style Guide</h3>
           <Image src="/images/styletile.jpg" width={900} height={600} alt="Style Tile" />
@@ -177,7 +181,6 @@ export default function ProjectFour() {
         <section className={styles.promotionalMaterialsSection}>
           <h3>Promotional Materials</h3>
 
-          {/* Printed Materials Section */}
           <div className={styles.printedMaterials}>
             <h4>Printed Materials</h4>
             <div className={styles.materialGallery}>
@@ -186,7 +189,6 @@ export default function ProjectFour() {
             </div>
           </div>
 
-          {/* Advertisement Video Section */}
           <div className={styles.advertisementVideo}>
             <h4>Advertisement Video</h4>
             <video controls className={styles.videoPlayer}>
@@ -196,12 +198,9 @@ export default function ProjectFour() {
           </div>
         </section>
 
-        <div className={styles.buttonGroup}>
-          <button className={styles.nextButton}>
-            <Link href="/ProjectThree">
-              Next Project <Image src="/images/chevron.svg" width={32} height={32} alt="next icon" className={styles.svg} />
-            </Link>
-          </button>
+        <div className={styles.buttonContainer}>
+          <PrevButton href="/ProjectThree" label="Previous Project" />
+          <NextButton href="/ProjectFive" label="Next Project" />
         </div>
       </main>
       <Footer />
