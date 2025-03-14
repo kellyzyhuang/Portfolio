@@ -351,7 +351,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
+/* buttons */
 .tryButton {
   background: none;
   border: 2px solid var(--white);
@@ -379,6 +379,82 @@
   padding: 0; 
 }
 
+/* sidebar */
+
+.sidebar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.sidebarLine {
+  width: 2px;
+  height: 50px;
+  background: var(--white);
+}
+
+.activeLine {
+  background: var(--white);
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.active {
+  background: var(--green);
+  border: none;
+  color: var(--background);
+}
+
+.inactive {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.sidebarText {
+  display: block; 
+  position: absolute; 
+  left: 50px; 
+  transform: translateY(48px);
+  white-space: wrap;  
+  line-height: 1.6; 
+}
+
+.problemSpacing {
+  margin-bottom: 53px; 
+  margin-top: -48px; 
+}
+
 @media (max-width: 1024px) {
   .flexRow {
     flex-direction: column;
@@ -397,6 +473,10 @@
   .featuresContainer {
     flex-direction: column;
     align-items: center;
+  }
+
+  .sidebar {
+    display: none; 
   }
 }
 
