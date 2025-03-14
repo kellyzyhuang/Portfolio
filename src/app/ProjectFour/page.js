@@ -1,6 +1,6 @@
 "use client"; 
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import styles from "./ProjectFour.module.css";
@@ -14,17 +14,17 @@ export default function ProjectFour() {
   const [currentFeature, setCurrentFeature] = useState(1);
   const [currentPersona, setCurrentPersona] = useState(0);
   const [currentSection, setCurrentSection] = useState("overview");
+  const [showSidebar, setShowSidebar] = useState(false);
 
-  const sections = [
-    { id: "overview", title: "Overview" },
-    { id: "problem-identification", title: "Problem Identification" },
-    { id: "user-personas", title: "User Personas" },
+  const sections = useMemo(() => [
+    { id: "problem", title: "Problem Identification" },
+    { id: "personas", title: "User Personas" },
     { id: "solution", title: "Solution" },
     { id: "user-flow", title: "User Flow" },
     { id: "features", title: "Features" },
     { id: "style-guide", title: "Style Guide" },
     { id: "promotional-materials", title: "Promotional Materials" },
-  ];
+  ], []);
 
   const personas = [
     "/images/reachout-persona-1.png",
@@ -39,45 +39,74 @@ export default function ProjectFour() {
     "/images/feature-2.png",
   ];
 
+  const handleNavigation = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 50, 
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       let current = "overview";
+      let sidebarVisible = false; 
+
       sections.forEach((section) => {
         const element = document.getElementById(section.id);
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top <= 150 && rect.bottom >= 150) {
             current = section.id;
+            sidebarVisible = true; 
           }
         }
       });
       setCurrentSection(current);
+      setShowSidebar(sidebarVisible); 
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    }; 
+  }, [sections]);
 
   return (
     <>
       <NavBar />
       <Cursor />
-      <div className={styles.container}>
-        <nav className={styles.sidebar}>
-          <ul>
-            {sections.map((section) => (
-              <li key={section.id}>
-                <a
-                  href={`#${section.id}`}
-                  className={currentSection === section.id ? styles.active : ""}
-                >
-                  {section.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      {showSidebar && (
+        <aside className={styles.sidebar}>
+        <ul>
+          {sections.map((section, index) => (
+            <li key={section.id} className={styles.sidebarItem}>
+              {index !== 0 && (
+                <div
+                  className={`${styles.sidebarLine} ${
+                    currentSection === section.id || sections[index - 1].id === currentSection
+                      ? styles.activeLine
+                      : ""
+                  }`}
+                ></div>
+              )}
+              <button
+                className={`${styles.circle} ${
+                  currentSection === section.id ? styles.active : styles.inactive
+                }`}
+                onClick={() => handleNavigation(section.id)}
+              >
+                {index + 1}
+              </button>
+              <span className={`${styles.sidebarText} ${section.id === "problem" ? styles.problemSpacing : ""}`}>{section.title}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+      )}
       <main className={styles.productCard}>
         <header className={styles.header}>
           <div className={styles.titleContainer}>
@@ -219,7 +248,7 @@ export default function ProjectFour() {
           </div>
         </section>
 
-        <section id="styles-guide" className={styles.styleGuideSection}>
+        <section id="style-guide" className={styles.styleGuideSection}>
           <h3>Style Guide</h3>
           <Image src="/images/styletile.jpg" width={900} height={600} alt="Style Tile" />
           <p>The styling of the web app is designed to align with values of trust, connection, and support. By carefully choosing colors and imagery that evoke warmth and security, ReachOut creates an environment where the diverse user base of nonprofit workers, ex-offenders, and employers feels safe and empowered.</p>
