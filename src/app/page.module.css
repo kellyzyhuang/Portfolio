@@ -61,9 +61,15 @@
 .description p {
   display: inline-block;
   margin-right: 20px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: var(--white);
+}
+
+.description h6 {
+  font-size: 1.2rem; 
+  color: rgb(205, 203, 203); 
+  line-height: 10; 
 }
 
 .links a:hover {

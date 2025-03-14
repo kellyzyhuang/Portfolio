@@ -8,9 +8,9 @@ import ProjectCard from "./components/ProjectCard";
 
 const projects = [
   { title: "Project One", front: "/images/Squiggly.svg", back: "/images/Finding-Aurora-Home-Cover.png", link: "/ProjectThree" },
-  { title: "Project Two", front: "/images/Cotton.svg", back: "/images/Exutoire-Home-Cover.png", link: "/ProjectOne" },
+  { title: "Project Two", front: "/images/Cotton.svg", back: "/images/City-Home-Cover.png", link: "/ProjectFive" },
   { title: "Project Three", front: "/images/Flower.svg", back: "/images/ReachOut-Home-Cover.png", link: "/ProjectFour" },
-  { title: "Project Four", front: "/images/Star.svg", back: "/images/HiveFive-Home-Cover.png", link: "/ProjectTwo" },
+  { title: "Project Four", front: "/images/Star.svg", back: "/images/Exutoire-Home-Cover.png", link: "/ProjectOne" },
 ];
 
 export default function Home() {
@@ -31,6 +31,7 @@ export default function Home() {
           <div className={styles.description}>
             <p>I like <span className={styles.highlight}>exploring</span> and <span className={styles.highlight}>creating</span> fun things.
             </p>
+            <h6>🚧  This portfolio is currently a work in progress  🚧</h6>
           </div>
         </motion.div>
 
