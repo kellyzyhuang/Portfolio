@@ -8,6 +8,7 @@ import Link from "next/link";
 import NextButton from "../components/NextButton";
 import PrevButton from "../components/PrevButton";
 import Cursor from "../components/Cursor";
+import LinkButton from "../components/LinkButton";
 
 export default function ProjectThree() {
   return (

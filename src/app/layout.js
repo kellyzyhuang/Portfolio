@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Kelly Huang Portfolio",
+  title: "Kelly Huang's Portfolio",
   description: "Kelly Huang's Portfolio",
   icons: {
     icon: "/favicon.ico",

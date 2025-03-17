@@ -24,7 +24,7 @@ export default function ProjectSix() {
               </Link>
             </button>
           </div>
-          <h4>Poster Design</h4>
+          <h4>Poster & Logo Design</h4>
         </header>
         <section className={styles.banner}>
           <Image src="/images/carepanda.png" width={900} height={350} alt="banner"/>
@@ -33,31 +33,38 @@ export default function ProjectSix() {
         <section className={styles.flexRow}>
           <div className={styles.overview}>
             <h3>Overview</h3>
-            <p>CarePanda.</p>
+            <p>CarePanda is a nonprofit organization dedicated to caring for pandas. The aim of this project was to create three different posters to advertise the organization. The posters utilize a bright green background, representing bamboo, and cute images of pandas with clear calls-to-action to engage audiences.</p>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>
-            <p>Designer, Developer</p>
+            <p>Designer</p>
             <h3>Timeline</h3>
-            <p>January 2024 – February 2024</p>
+            <p>January 2024 – January 2024</p>
             <h3>Tools Used</h3>
             <p>Adobe Illustrator</p>
           </div>
         </section>
 
         <section className={styles.sectionHeader}>
-          <h2>Example Screens</h2>
+          <h2>Mockups</h2>
         </section>
 
         <section className={styles.gallery}>
-          <Image src="/images/aurora-1.png" width={900} height={500} alt="one"/>
-          <Image src="/images/aurora-2.png" width={900} height={500} alt="two"/>
-          <Image src="/images/aurora-3.png" width={900} height={500} alt="three"/>
+          <Image src="/images/care-panda-mockup.png" width={900} height={500} alt="care panda posters"/>
+          <Image src="/images/carepanda-mockup-2.png" width={900} height={500} alt="care panda posters"/>
+        </section>
+
+        <section className={styles.sectionHeader}>
+          <h2>Logo Design</h2>
+        </section>
+
+        <section className={styles.gallery}>
+          <Image src="/images/care-panda-logo.png" width={900} height={500} alt="care panda logo design"/>
         </section>
 
         <section className={styles.designSuccess}>
-          <p>Finding Aurora encourages readers to choose their own story path through interactive elements. Each decision leads to a different outcome wherein the reader learns new facts surrounding polar bears, their environment, or other arctic animals.</p>
-          <p className={styles.paraTwo}>It combines age-appropriate language, engaging motion graphics, and sound to create an immersive experience suitable for parents at home or for educators in the classroom!</p>
+          <p>The logo features a panda resting on a house made out of bamboo to represent how CarePanda serves as a safe space for pandas. Vibrant colours as well as a rounded typeface are used to reflect a fun and warm atmosphere.</p>
+          <p className={styles.paraTwo}></p>
         </section>
 
         <div className={styles.buttonContainer}>

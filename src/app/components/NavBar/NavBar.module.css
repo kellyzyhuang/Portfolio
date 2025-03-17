@@ -1,20 +1,21 @@
 @import url("https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap");
 
-/* Navigation Bar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
   width: 100%;
-  background: var(--background);
+  background: none; 
   color: var(--white);
   font-family: "Satoshi", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  position: fixed; 
+  top: 0; 
+  z-index: 1000; 
 }
 
-/* Navigation List */
 .navList {
   list-style: none;
   display: flex;
@@ -38,14 +39,11 @@
   font-weight: bold;
 }
 
-
-/* Logo */
 .logo {
   width: 60px;
   height: auto;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .nav {
     flex-direction: column;
