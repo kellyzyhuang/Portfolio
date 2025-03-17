@@ -29,16 +29,30 @@ export default function ProjectSeven() {
           </div>
           <h2>Web Application Research & Design</h2>
         </header>
-
-        <section className={styles.banner}>
+        <section>
           <Image 
             src="/images/weconnect.png" 
-            width={900} 
-            height={200} 
+            width={1300} 
+            height={400} 
             alt="banner"
             onClick={() => setSelectedImage("/images/weconnect.png")}
-            className={styles.clickableImage} // Add CSS for hover effect
+            className={styles.banner} 
           />
+        </section>
+
+        <section className={styles.flexRow}>
+          <div className={styles.overview}>
+            <h3>Overview</h3>
+            <p>WeConnect is a video conferencing web app with instant translation catered to multicultural users globally. It tackles common user challenges, such as context switching and steep learning curves, by creating an intuitive design that integrates frequently used features all in one app.</p>
+          </div>
+          <div className={styles.role}>
+            <h3>Role</h3>
+            <p>UI/UX Researcher, UI Designer</p>
+            <h3>Timeline</h3>
+            <p>January 2024 – April 2024</p>
+            <h3>Tools Used</h3>
+            <p>Google Sheets, Google Docs, Google Forms, Figma</p>
+          </div>
         </section>
 
         <section className={styles.sectionHeader}>
@@ -97,6 +111,11 @@ export default function ProjectSeven() {
               View Style Guide!
             </a>
           </button>
+        </section>
+
+        <section className={styles.designSuccess}>
+          <p>WeConnect's design uses shades of blue and purple to provide a modern, but professional aesthetic. Rounded buttons and icons provide a sense of familiarity to ensure intuitiveness.</p>
+          <p>WeConnect's logo utilizes a paperclip and a chat icon to symbolize connection and collaboration, which is the core purpose of the app. </p>
         </section>
 
         <div className={styles.buttonContainer}>
