@@ -31,7 +31,6 @@ export default function Home() {
           <div className={styles.description}>
             <p>I like <span className={styles.highlight}>exploring</span> and <span className={styles.highlight}>creating</span> fun things.
             </p>
-            <h6>🚧  This portfolio is currently a work in progress  🚧</h6>
           </div>
         </motion.div>
 

@@ -44,6 +44,11 @@ export default function ProjectSeven() {
           <div className={styles.overview}>
             <h3>Overview</h3>
             <p>WeConnect is a video conferencing web app with instant translation catered to multicultural users globally. It tackles common user challenges, such as context switching and steep learning curves, by creating an intuitive design that integrates frequently used features all in one app.</p>
+              <div className={styles.buttonGroup}>
+                <button className={styles.tryButton}>
+                  <a href="https://www.figma.com/proto/dRkesdSgtAJz1WO2tzg8sn/WeConnect?node-id=61-918&t=MLcZa8b8ksMZ84PM-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=61%3A918&show-proto-sidebar=1" target="_blank">View Prototype</a>
+                </button>
+              </div>
           </div>
           <div className={styles.role}>
             <h3>Role</h3>

@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.left}>
         <Link href="/">
-          <Image src="/images/logo.svg" alt="logo" width={60} height={60} />
+          <Image src="/images/logo.svg" alt="logo" width={80} height={80} />
         </Link>
       </div>
       <div className={styles.right}>
