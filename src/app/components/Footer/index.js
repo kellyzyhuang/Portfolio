@@ -10,6 +10,7 @@ export default function Footer() {
         <Link href="/">
           <Image src="/images/logo.svg" alt="logo" width={80} height={80} />
         </Link>
+        <Image src="images/pookie-2.svg" alt="dog" width={100} height={100} className={styles.pookie} />
       </div>
       <div className={styles.right}>
         <p>Connect with me!</p>
