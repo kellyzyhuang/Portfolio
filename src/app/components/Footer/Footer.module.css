@@ -23,6 +23,10 @@
   margin-left: 1rem; 
 }
 
+.ball {
+  margin-top: -4.55rem; 
+}
+
 .right {
   display: flex;
   flex-direction: column;
