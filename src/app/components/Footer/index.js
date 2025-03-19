@@ -19,7 +19,13 @@ export default function Footer() {
         <Link href="/">
           <Image src="/images/footer-logo.svg" alt="logo" width={80} height={80} />
         </Link>
-        <Image src="images/ball.svg" alt="ball" width={12} height={12} className={styles.ball}/>
+        <Image 
+          src="images/ball.svg" 
+          alt="ball" 
+          width={12} 
+          height={12} 
+          className={`${styles.ball} ${isBouncing ? styles.bounce : ""}`}
+        />
         <Image 
           src="images/pookie-2.svg" 
           alt="dog" 
