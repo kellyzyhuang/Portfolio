@@ -20,7 +20,7 @@ export default function Footer() {
           <a href="https://github.com/kellyzyhuang" target="_blank">
             <FaGithub size={24} className={styles.icon} />
           </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kellyziyanhuang@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:kellyziyanhuang@gmail.com">
             <FaEnvelope size={24} className={styles.icon} />
           </a>
         </div>

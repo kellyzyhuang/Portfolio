@@ -57,7 +57,7 @@ export default function ProjectOne() {
         </section>
 
         <div className={styles.buttonContainer}>
-          <PrevButton href="/ProjectFive" label="Previous Project" />
+          <PrevButton href="/ProjectSeven" label="Previous Project" />
           <NextButton href="/ProjectTwo" label="Next Project" />
         </div>
       </main>
