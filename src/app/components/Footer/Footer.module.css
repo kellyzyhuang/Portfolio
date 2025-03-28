@@ -75,6 +75,14 @@
   100% { transform: translateX(100vw) translateY(0) scaleY(1); }
 }
 
+.bounce {
+  animation: bounce 2s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
+}
+
+.pookie {
+  margin-left: 1rem; 
+}
+
 .ball {
   transition: transform 5s ease-in-out; 
   position: relative; 
@@ -82,8 +90,18 @@
   top: 50%; 
 }
 
-.bounce {
-  animation: bounce 2s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
+@keyframes pookie-chase {
+  0% {
+    transform: translateX(0vw); 
+  }
+  100% {
+    transform: translateX(100vw); 
+  }
+}
+
+.pookieRunning {
+  margin-left: 1rem; 
+  animation: pookie-chase 4s linear forwards; 
 }
 
 

@@ -7,10 +7,16 @@ import { useState } from "react";
 export default function Footer() {
 
   const [isBouncing, setIsBouncing] = useState(false); 
+  const [isChasing, setIsChasing] = useState(false); 
 
   const handleDogClick = () => {
     setIsBouncing(true); 
-    setTimeout(() => setIsBouncing(false), 1000); 
+    setIsChasing(true); 
+
+    setTimeout(() => {
+      setIsBouncing(false); 
+      setIsChasing(false); 
+    }, 4000); 
   }
 
   return (
@@ -19,6 +25,7 @@ export default function Footer() {
         <Link href="/">
           <Image src="/images/footer-logo.svg" alt="logo" width={80} height={80} />
         </Link>
+
         <Image 
           src="images/ball.svg" 
           alt="ball" 
@@ -26,15 +33,29 @@ export default function Footer() {
           height={12} 
           className={`${styles.ball} ${isBouncing ? styles.bounce : ""}`}
         />
-        <Image 
-          src="images/pookie-2.svg" 
-          alt="dog" 
-          width={100} 
-          height={100} 
-          className={styles.pookie}
-          onClick={handleDogClick}
-        />
+
+        {!isChasing ? (
+          <>
+            <Image 
+              src="images/pookie-2.svg" 
+              alt="dog" 
+              width={100} 
+              height={100} 
+              className={styles.pookie}
+              onClick={handleDogClick}
+            />
+          </>
+        ) : (
+          <video 
+          src="/videos/pookie-running.mp4"
+          width="160"
+          height="100"
+          autoPlay
+          className={styles.pookieRunning}
+          />
+        )}
       </div>
+
       <div className={styles.right}>
         <p>Connect with me!</p>
         <div className={styles.icons}>
