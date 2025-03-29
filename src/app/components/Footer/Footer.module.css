@@ -10,6 +10,8 @@
   background: var(--background);
   color: var(--white);
   font-family: "Satoshi", sans-serif;
+  min-height: 160px;
+  overflow: hidden; 
 }
 
 .left {
@@ -17,6 +19,14 @@
   display: flex;
   align-items: center;
   justify-content: flex-start; 
+}
+
+.pookieWrapper {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  cursor: pointer; 
+  height: 100px;
 }
 
 .pookie {
@@ -63,15 +73,15 @@
 
 @keyframes bounce {
   0%   { transform: translate(0vw, 0); }
-  10%  { transform: translate(10vw, -40px); }
+  10%  { transform: translate(10vw, -30px); }
   20%  { transform: translate(20vw, 0); }
-  30%  { transform: translate(30vw, -60px); }
+  30%  { transform: translate(30vw, -50px); }
   40%  { transform: translate(40vw, 0); }
-  50%  { transform: translate(50vw, -80px); }
+  50%  { transform: translate(50vw, -70px); }
   60%  { transform: translate(60vw, 0); }
-  70%  { transform: translate(70vw, -60px); }
+  70%  { transform: translate(70vw, -50px); }
   80%  { transform: translate(80vw, 0); }
-  90%  { transform: translate(90vw, -40px); }
+  90%  { transform: translate(90vw, -30px); }
   100% { transform: translate(100vw, 0); }
 }
 
@@ -83,25 +93,62 @@
   margin-left: 1rem; 
 }
 
+.logoWrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+
 .ball {
   transition: transform 50ms ease-in-out; 
   position: relative; 
-  left: 0; 
-  top: 50%; 
+  left: 90px; 
+  top: 0px; 
+  z-index: 1; 
 }
 
 @keyframes pookie-chase {
-  0% {
-    transform: translateX(0vw); 
-  }
-  100% {
-    transform: translateX(100vw); 
-  }
+  0%   { transform: translate(0vw, 0); }
+
+  17%  { transform: translate(17vw, -10px); }
+  20%  { transform: translate(20vw, 0); }
+
+  34%  { transform: translate(34vw, -10px); }
+  37%  { transform: translate(37vw, 0); }
+
+  51%  { transform: translate(51vw, -10px); }
+  54%  { transform: translate(54vw, 0); }
+
+  68%  { transform: translate(68vw, -10px); }
+  71%  { transform: translate(71vw, 0); }
+
+  85%  { transform: translate(85vw, -10px); }
+  88%  { transform: translate(88vw, 0); }
+
+  100% { transform: translate(100vw, 0); }
 }
 
 .pookieRunning {
   margin-left: 1rem; 
   animation: pookie-chase 3s linear forwards; 
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.blurb {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-top: 0.25rem;
+  animation: wiggle 2s infinite;
+  cursor: default;
 }
 
 
