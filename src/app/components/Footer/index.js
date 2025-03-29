@@ -16,7 +16,7 @@ export default function Footer() {
     setTimeout(() => {
       setIsBouncing(false); 
       setIsChasing(false); 
-    }, 4000); 
+    }, 2500); 
   }
 
   return (
@@ -46,11 +46,11 @@ export default function Footer() {
             />
           </>
         ) : (
-          <video 
-          src="/videos/pookie-running.mp4"
-          width="160"
-          height="100"
-          autoPlay
+          <Image 
+          src="/videos/pookie-running.gif"
+          width={200}
+          height={120}
+          alt="dog running"
           className={styles.pookieRunning}
           />
         )}
