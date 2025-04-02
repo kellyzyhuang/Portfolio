@@ -56,6 +56,7 @@ export default function Footer() {
             height={120}
             alt="dog running"
             className={styles.pookieRunning}
+            unoptimized
             />
           )}
         </div>
